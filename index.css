@@ -1,0 +1,132 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Gotham";
+    font-weight: 300;
+    background-color: blanchedalmond;
+}
+
+.container {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-items-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    padding: 10px 65px 12px 65px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: lightcoral;
+    padding: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.title{
+    width: 60%;
+    font-size:26px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: ease-in-out .3s;
+}
+
+.title span{
+
+    color: red;
+}
+
+
+.item:hover .title{
+    opacity: 0;
+}
+
+.detail h2{
+    width: 67%;
+    transition: ease-in-out .7s;
+    transform: translateY(20px);
+}
+
+.item:hover .detail h2 {
+    transform: translateY(0);
+}
+
+.detail p {
+    width: 77%;
+    transition: ease-in-out .7s;
+    transform: translateY(20px) scale(0.7);
+}
+
+.item:hover .detail p {
+    transform: translateY(0) scale(1);
+}
+
+.item:hover .detail{
+    opacity: 1;
+    background-color: rgba(235, 9, 62, 0.8);
+    transition: ease-in-out .3s;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+.detail {
+    color: white;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    padding: 10px 0px 10px 0px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-90%) translateY(20%) scale(0.4);
+    background-color: deeppink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+}
+
+@media screen and (max-width:680px) {
+    .grid-items-container {
+        grid-template-columns: auto;
+    }
+
+    .item {
+        height: 200px;
+    }
+
+    .title {
+        width: 100%;
+    }
+
+    .detail h2 {
+        width: 87%;
+        font-size: 23px;
+    }
+    .detail p {
+        width: 92%;
+        font-size: 16px;
+    }
+}
+
+
+
