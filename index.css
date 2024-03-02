@@ -2,7 +2,6 @@ html, body {
     padding: 0px;
     margin: 0px;
     font-family: "Gotham";
-    font-weight: 300;
     background-color: blanchedalmond;
 }
 
@@ -29,7 +28,6 @@ html, body {
 
 .item {
     background-color: lightcoral;
-    padding: 10px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,9 +35,18 @@ html, body {
     position: relative;
 }
 
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-image: linear-gradient(to bottom, transparent, transparent ,transparent, black);
+}
+
 .title{
+    z-index: 1;
     width: 60%;
-    font-size:26px;
+    font-size:28px;
     font-weight: bold;
     color: white;
     position: absolute;
@@ -51,7 +58,6 @@ html, body {
 }
 
 .title span{
-
     color: red;
 }
 
@@ -88,6 +94,7 @@ html, body {
 }
 
 .detail {
+    z-index: 1;
     color: white;
     opacity: 0;
     position: absolute;
@@ -120,11 +127,11 @@ html, body {
 
     .detail h2 {
         width: 87%;
-        font-size: 23px;
+        font-size: 25px;
     }
     .detail p {
         width: 92%;
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
