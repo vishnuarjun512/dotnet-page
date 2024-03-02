@@ -67,6 +67,7 @@ html, body {
 }
 
 .detail h2{
+    font-size: 32px;
     width: 67%;
     transition: ease-in-out .7s;
     transform: translateY(20px);
@@ -77,6 +78,7 @@ html, body {
 }
 
 .detail p {
+    font-size: 20px;
     width: 77%;
     transition: ease-in-out .7s;
     transform: translateY(20px) scale(0.7);
